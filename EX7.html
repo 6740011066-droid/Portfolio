@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Click Counter - ADWA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="Exercises หน้า.html" class="logo">← กลับหน้าแบบฝึกหัด</a>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 100px; padding-bottom: 50px;">
+        
+        <div class="work-neon-frame" style="margin-bottom: 30px; border-color: var(--text-gray) !important; box-shadow: none; opacity: 0.9;">
+            <h2 style="color: var(--primary); margin-bottom: 15px;">โจทย์ Lab 5: ตัวนับจำนวนคลิก (JavaScript Basic)</h2>
+            <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.6;">
+                ฝึกการใช้ JavaScript เพื่อรับ Element, สร้างตัวแปรเก็บค่า, และใช้ Event Listener เพื่อเปลี่ยนแปลงข้อมูลบนหน้าเว็บแบบ Real-time
+            </p>
+        </div>
+
+        <div class="work-neon-frame">
+            <div style="text-align: center; padding: 40px;">
+                <h1>ตัวนับจำนวนคลิก</h1>
+                <p style="font-size: 1.2rem; margin: 20px 0;">
+                    จำนวนคลิก: <span id="clickCount" style="color: var(--primary); font-size: 2rem; font-weight: bold;">0</span> ครั้ง
+                </p>
+                
+                <button id="clickButton" class="my-button">คลิกฉัน!</button>
+                
+                <p style="margin-top: 20px; color: var(--text-gray); font-size: 0.9rem;">
+                    ผลงานโดย อัดวา หัดเลาะ (6740011066)
+                </p>
+
+                <div style="margin-top: 30px;">
+                    <a href="Exercises หน้า.html" class="btn-back">← ย้อนกลับ</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // --- ส่วนการทำงานของ JavaScript ---
+
+        // 1. รับ Element ของปุ่ม และส่วนแสดงผลมาเก็บไว้ในตัวแปร
+        const button = document.getElementById('clickButton');
+        const display = document.getElementById('clickCount');
+
+        // 2. สร้างตัวแปรสำหรับเก็บจำนวนคลิก เริ่มต้นที่ 0
+        let count = 0;
+
+        // 3. เพิ่ม Event Listener ให้กับปุ่ม เมื่อมีการคลิก ('click')
+        button.addEventListener('click', function() {
+            // 4. เพิ่มจำนวนคลิกขึ้น 1
+            count = count + 1;
+
+            // 5. อัปเดตข้อความในส่วนแสดงผล (span) ให้ตรงกับค่าปัจจุบัน
+            display.innerText = count;
+            
+            // เพิ่มลูกเล่น: พิมพ์ลง Console เพื่อตรวจสอบ (เหมือนการ Debug ใน Android Studio)
+            console.log("จำนวนคลิกปัจจุบันคือ: " + count);
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 ADWA HADLOH - Lab 5 JavaScript Basics</p>
+    </footer>
+</body>
+</html>

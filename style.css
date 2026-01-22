@@ -1,0 +1,235 @@
+/* --- 1. Variables & Global Reset --- */
+:root {
+    --primary: #3b82f6;
+    --bg-dark: #111827;
+    --bg-card: #1f2937;
+    --text-white: #f9fafb;
+    --text-gray: #9ca3af;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body { 
+    background-color: var(--bg-dark); 
+    color: var(--text-white); 
+    scroll-behavior: smooth; 
+    line-height: 1.5; 
+}
+
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 2rem; 
+}
+
+/* --- 2. Navigation --- */
+header { 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    background: rgba(17, 24, 39, 0.95); 
+    backdrop-filter: blur(10px); 
+    z-index: 1000; 
+}
+
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 70px; 
+}
+
+.logo { font-size: 1.4rem; font-weight: 700; color: white; text-decoration: none; }
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--text-gray); transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+.menu-icon { display: none; font-size: 1.8rem; cursor: pointer; }
+
+/* --- 3. Hero & About Layouts --- */
+#hero, .about-flex { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    min-height: 70vh; 
+    padding: 60px 0; 
+    gap: 3rem; 
+    flex-wrap: wrap; 
+}
+
+h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 0.5rem; }
+.subtitle { font-size: 1.3rem; color: var(--text-gray); margin-bottom: 1rem; }
+.section-title { font-size: 2.2rem; text-align: center; margin: 3rem 0 1.5rem; }
+
+.blob-image { width: 320px; height: 320px; background: var(--primary); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; overflow: hidden; }
+.blob-small { width: 180px; height: 180px; background: var(--primary); border-radius: 40% 60% 70% 30% / 40% 50% 50% 60%; overflow: hidden; }
+.blob-image img, .blob-small img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- 4. Skills & Social --- */
+.skill-item { background: var(--bg-card); padding: 1.2rem; border-radius: 12px; margin-bottom: 0.8rem; }
+.progress-bar { background: #374151; height: 10px; border-radius: 6px; overflow: hidden; }
+.progress { background: var(--primary); height: 100%; transition: 1s ease; }
+
+.social-wrapper { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 1rem; }
+.social-item { text-decoration: none; color: white; background: var(--bg-card); padding: 0.7rem 1.5rem; border-radius: 50px; border: 1px solid #374151; transition: 0.3s; font-size: 0.9rem; }
+.social-item:hover { background: var(--primary); transform: translateY(-5px); }
+
+.btn { background: var(--primary); color: white; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; display: inline-block; cursor: pointer; border: none;}
+footer { text-align: center; padding: 3rem; color: var(--text-gray); font-size: 0.9rem; }
+
+/* --- 5. Exercises Neon Frame & Card --- */
+.work-neon-frame {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 3px solid var(--primary) !important; 
+    border-radius: 20px;
+    background: rgba(17, 24, 39, 0.9);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.7), 
+                inset 0 0 15px rgba(59, 130, 246, 0.3);
+    box-sizing: border-box; 
+}
+
+.work-card-content {
+    display: flex;
+    flex-direction: row; 
+    gap: 30px;
+    align-items: center;
+}
+
+.work-img { flex: 1; min-width: 0; }
+.work-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+.work-content { flex: 1.5; text-align: left; }
+.work-content h3 { margin-bottom: 10px; color: #ffffff; font-size: 1.8rem; }
+.work-content p { font-size: 1rem; line-height: 1.6; color: #9ca3af; margin-bottom: 20px; }
+
+/* --- 6. XERCISES List Page --- */
+.exercise-list-wrapper {
+    background: var(--bg-card);
+    max-width: 450px;
+    margin: 80px auto;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #374151;
+}
+
+.exercise-title { color: var(--primary); font-size: 2.2rem; margin-bottom: 2rem; }
+.list-container { display: flex; flex-direction: column; gap: 12px; }
+.list-item {
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    transition: 0.3s;
+}
+.list-item:hover { background: var(--primary); transform: translateX(10px); }
+.back-link { display: inline-block; margin-top: 20px; color: var(--text-gray); text-decoration: none; }
+
+/* --- 7. Lab Cards (Ex.1 & Profile) --- */
+.product-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    color: #111827;
+}
+
+.product-img-box { background: #f3f4f6; border-radius: 10px; padding: 15px; margin-bottom: 20px; }
+.product-img-box img { max-width: 100%; height: auto; object-fit: contain; }
+.product-title { font-weight: bold; font-size: 1.5rem; margin-bottom: 10px; }
+.product-price { color: #28a745; font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; }
+
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.add-to-cart-btn:hover { background-color: #0056b3; transform: translateY(-2px); }
+
+/* Profile Card */
+.profile-card { display: flex; flex-direction: column; align-items: center; padding: 20px; text-align: center; }
+.profile-img-box {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    overflow: hidden;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+.profile-img-box img { width: 100%; height: 100%; object-fit: cover; }
+.profile-info h1 { font-size: 2rem; color: white; }
+.profile-info ul { display: inline-block; text-align: left; }
+
+.btn-back {
+    display: inline-block;
+    background: transparent;
+    color: var(--primary);
+    padding: 10px 30px;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.btn-back:hover { background: var(--primary); color: white; box-shadow: 0 0 15px rgba(59, 130, 246, 0.6); }
+
+/* --- 8. Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    .menu-icon { display: block; }
+    .nav-links { 
+        display: none; position: absolute; top: 70px; left: 0; width: 100%; 
+        background: var(--bg-card); flex-direction: column; padding: 2rem; text-align: center; 
+    }
+    .nav-links.active { display: flex; }
+    
+    #hero, .about-flex { flex-direction: column-reverse; text-align: center; padding-top: 100px; min-height: auto; }
+    h1 { font-size: 2.2rem; }
+    .blob-image { width: 260px; height: 260px; }
+
+    .work-neon-frame { padding: 20px; margin: 20px auto; }
+    .work-card-content { flex-direction: column; text-align: center; }
+    .work-content { text-align: center; }
+    .work-img { max-width: 100%; }
+
+    /* --- สไตล์สำหรับปุ่ม Lab 2 --- */
+.my-button {
+    background-color: #007bff; /* โจทย์: เปลี่ยนสีพื้นหลังเป็นน้ำเงิน */
+    color: #ffffff;            /* โจทย์: เปลี่ยนสีตัวอักษรเป็นสีขาว */
+    padding: 10px 20px;        /* โจทย์: Padding บน-ล่าง 10px, ซ้าย-ขวา 20px */
+    border: none;              /* โจทย์: ลบเส้นขอบออก */
+    border-radius: 5px;        /* โจทย์: ขอบปุ่มมน 5px */
+    font-size: 16px;           /* โจทย์: ขนาดตัวอักษร 16px */
+    cursor: pointer;           /* เพิ่มเติม: เปลี่ยนสัญลักษณ์เมาส์เป็นรูปมือ */
+    transition: background-color 0.3s ease; /* เพิ่มเติม: ทำให้สีเปลี่ยนแบบนุ่มนวล */
+}
+
+/* โจทย์: เมื่อนำเมาส์ไปชี้ (hover) ให้เปลี่ยนสีเป็นน้ำเงินเข้ม */
+.my-button:hover {
+    background-color: #0056b3;
+}
+}

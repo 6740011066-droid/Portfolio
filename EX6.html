@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Basic Info Card - ADWA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* สไตล์สำหรับการ์ดตามโจทย์กำหนด */
+        .info-card {
+            /* โจทย์: กำหนดความกว้าง 300px และจัดกึ่งกลาง */
+            width: 300px;
+            margin: 0 auto;
+
+            /* โจทย์: ขอบสีเทาอ่อน (#ccc) ขนาด 1px แบบทึบ */
+            border: 1px solid #ccc;
+
+            /* โจทย์: พื้นที่ภายใน (padding) 20px */
+            padding: 20px;
+
+            /* โจทย์: พื้นหลังสีขาว (#ffffff) */
+            background-color: #ffffff;
+
+            /* โจทย์: ข้อความภายใน (h2, p) อยู่กึ่งกลาง */
+            text-align: center;
+
+            /* โจทย์: เงาตกกระทบเล็กน้อย (box-shadow) */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+            /* เพิ่มเติม: ทำให้ขอบมนเล็กน้อยเพื่อให้เข้ากับธีมหลัก */
+            border-radius: 10px;
+            color: #333; /* ปรับสีตัวอักษรให้ตัดกับพื้นหลังขาว */
+        }
+
+        .info-card h2 {
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="Exercises หน้า.html" class="logo">← กลับหน้าแบบฝึกหัด</a>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 100px; padding-bottom: 50px;">
+        
+        <div class="work-neon-frame" style="margin-bottom: 30px; border-color: var(--text-gray) !important; box-shadow: none; opacity: 0.9;">
+            <h2 style="color: var(--primary); margin-bottom: 15px;">โจทย์ Lab 4: สร้างการ์ดข้อมูลพื้นฐาน</h2>
+            <p style="font-size: 0.9rem; color: var(--text-gray);">
+                ฝึกการใช้ border, padding, background-color และ text-align เพื่อจัดรูปแบบคอมโพเนนต์การ์ด
+            </p>
+        </div>
+
+        <div class="work-neon-frame">
+            <div class="info-card">
+                <h2>ข้อมูลโปรเจกต์</h2>
+                <p>รหัสนักศึกษา 6740011066 กำลังพัฒนาทักษะด้าน Android Studio และ Data Science ผ่านแบบฝึกหัด HTML/CSS ครับ</p>
+                
+                <div style="margin-top: 20px;">
+                    <a href="Exercises หน้า.html" class="btn-back">← ย้อนกลับ</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ADWA HADLOH - Lab 4 Completed</p>
+    </footer>
+</body>
+</html>

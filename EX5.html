@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Profile Card Challenge - ADWA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="Exercises หน้า.html" class="logo">← กลับหน้าแบบฝึกหัด</a>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 100px; padding-bottom: 50px;">
+        <div class="work-neon-frame" style="margin-bottom: 30px; border-color: var(--text-gray) !important; box-shadow: none; opacity: 0.9;">
+            <h2 style="color: var(--primary); margin-bottom: 15px;">โจทย์ Lab 3: สร้างการ์ดโปรไฟล์อย่างง่าย</h2>
+            <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.6;">
+                ฝึกการใช้ CSS จัดรูปแบบการ์ด: กำหนดขนาด, จัดกึ่งกลาง, ใส่เงา, ทำรูปวงกลม และตกแต่งปุ่มติดต่อ
+            </p>
+        </div>
+
+        <div class="work-neon-frame">
+            <div class="profile-card">
+                <img src="ตัวเอง2.jpg" alt="Profile Picture" class="profile-img">
+                <h2 class="profile-name">อัดวา หัดเลาะ</h2>
+                <p class="profile-title">นักศึกษา / นักพัฒนาแอปพลิเคชัน</p>
+                <div class="profile-bio">
+                    <p>รหัสนักศึกษา 6740011066 สนใจด้าน Android Studio และ Data Science ครับ</p>
+                </div>
+                <button class="contact-button">ติดต่อฉัน</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ADWA HADLOH - Lab 3 Completed</p>
+    </footer>
+</body>
+</html>
+
+<!-- /* --- สไตล์สำหรับ Profile Card Lab 3 --- */
+
+/* โจทย์: กำหนดความกว้าง 300px, จัดกึ่งกลาง, สีพื้นหลังขาว, ขอบมน, และมีเงา */
+.profile-card {
+    width: 300px;
+    margin: 0 auto;             /* จัดกึ่งกลางแนวนอนภายใน Container */
+    background-color: #ffffff;  /* โจทย์: พื้นหลังสีขาว */
+    padding: 30px;              /* โจทย์: เพิ่ม Padding */
+    border-radius: 15px;        /* โจทย์: ขอบโค้งมนเล็กน้อย */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* โจทย์: เพิ่มเงาให้มีมิติ */
+    text-align: center;         /* โจทย์: จัดเนื้อหาภายในให้用户อยู่กึ่งกลาง */
+    color: #111827;             /* ปรับสีตัวอักษรให้ตัดกับพื้นหลังขาว */
+}
+
+/* โจทย์: จัดรูปแบบรูปภาพโปรไฟล์ให้เป็นวงกลมและขนาดเหมาะสม */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;         /* โจทย์: ทำให้เป็นวงกลม */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary); /* เพิ่มเติม: ใส่ขอบสีฟ้าตามธีมหลัก */
+}
+
+.profile-name {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.profile-title {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.profile-bio {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* โจทย์: จัดรูปแบบปุ่มติดต่อฉัน ให้มีสีน่าสนใจและขอบโค้งมน */
+.contact-button {
+    background-color: var(--primary); /* ใช้สีฟ้าตามธีมหลัก */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;        /* โจทย์: ขอบโค้งมน (ทรงแคปซูล) */
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);     /* เพิ่มเติม: ขยายขนาดเล็กน้อยเมื่อชี้ */
+} -->

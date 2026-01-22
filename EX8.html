@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6: Simple Counter - ADWA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="Exercises หน้า.html" class="logo">← กลับหน้าแบบฝึกหัด</a>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 100px; padding-bottom: 50px;">
+        
+        <div class="work-neon-frame" style="margin-bottom: 30px; border-color: var(--text-gray) !important; box-shadow: none; opacity: 0.9;">
+            <h2 style="color: var(--primary); margin-bottom: 15px;">โจทย์ Lab 6: ตัวนับเลข (เพิ่ม/ลด)</h2>
+            <p style="font-size: 0.9rem; color: var(--text-gray);">
+                ฝึกการจัดการ Event บนหลายปุ่ม และการเขียนเงื่อนไขเพื่อเปลี่ยนแปลงค่าตัวแปรใน JavaScript
+            </p>
+        </div>
+
+        <div class="work-neon-frame">
+            <div style="text-align: center; padding: 40px;">
+                <h1>ตัวนับเลข (Counter)</h1>
+                
+                <div id="counter-display" style="font-size: 4rem; font-weight: bold; margin: 30px 0; color: white;">0</div>
+                
+                <div style="display: flex; justify-content: center; gap: 20px;">
+                    <button id="decrease" class="btn" style="background-color: #ef4444;">ลด (Decrease)</button>
+                    
+                    <button id="increase" class="btn" style="background-color: #10b981;">เพิ่ม (Increase)</button>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <a href="Exercises หน้า.html" class="btn-back">← ย้อนกลับ</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // --- ส่วนการทำงานของ JavaScript ---
+
+        // 1. รับ Element ของหน้าจอแสดงผล และปุ่มทั้งสอง
+        const display = document.getElementById('counter-display');
+        const btnIncrease = document.getElementById('increase');
+        const btnDecrease = document.getElementById('decrease');
+
+        // 2. ตั้งค่าตัวแปรเริ่มต้น
+        let count = 0;
+
+        // 3. ฟังก์ชันสำหรับอัปเดตหน้าจอ (สร้างเป็นฟังก์ชันเพื่อลดการเขียนโค้ดซ้ำ)
+        function updateDisplay() {
+            display.innerText = count;
+            // เพิ่มสีสัน: ถ้าค่าติดลบให้เป็นสีแดง ถ้าเป็นบวกให้เป็นสีเขียว
+            if (count > 0) {
+                display.style.color = "#10b981";
+            } else if (count < 0) {
+                display.style.color = "#ef4444";
+            } else {
+                display.style.color = "white";
+            }
+        }
+
+        // 4. เหตุการณ์เมื่อคลิกปุ่มเพิ่ม
+        btnIncrease.addEventListener('click', () => {
+            count++;
+            updateDisplay();
+        });
+
+        // 5. เหตุการณ์เมื่อคลิกปุ่มลด
+        btnDecrease.addEventListener('click', () => {
+            count--;
+            updateDisplay();
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 ADWA HADLOH - Student ID: 6740011066</p>
+    </footer>
+</body>
+</html>

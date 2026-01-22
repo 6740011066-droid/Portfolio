@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Button Decoration - ADWA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="Exercises หน้า.html" class="logo">← กลับหน้าแบบฝึกหัด</a>
+        </nav>
+    </header>
+
+    <main class="container" style="padding-top: 100px; padding-bottom: 50px;">
+        
+        <div class="work-neon-frame" style="margin-bottom: 30px; border-color: var(--text-gray) !important; box-shadow: none; opacity: 0.9;">
+            <h2 style="color: var(--primary); margin-bottom: 15px;">โจทย์ Lab 2: ตกแต่งปุ่มด้วย CSS พื้นฐาน</h2>
+            <p style="font-size: 0.9rem; color: var(--text-gray); line-height: 1.6;">
+                ฝึกการใช้คุณสมบัติ background-color, padding, border-radius, font-size 
+                และการใช้ :hover เพื่อเปลี่ยนสีปุ่มเมื่อนำเมาส์ไปชี้
+            </p>
+        </div>
+
+        <div class="work-neon-frame">
+            <div style="text-align: center; padding: 40px;">
+                <button class="my-button">คลิกที่นี่</button>
+                
+                <p style="margin-top: 20px; color: var(--text-gray); font-size: 0.8rem;">
+                    (lespect แล้วจะ CSSทีปิดใว้)
+                </p>
+                
+                <div style="margin-top: 30px;">
+                    <a href="Exercises หน้า.html" class="btn-back">← ย้อนกลับ</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ADWA HADLOH - Lab 2 Completed</p>
+    </footer>
+</body>
+</html>
+
+
+
+<!-- /* --- สไตล์สำหรับปุ่ม Lab 2 --- */
+.my-button {
+    background-color: #007bff; /* โจทย์: เปลี่ยนสีพื้นหลังเป็นน้ำเงิน */
+    color: #ffffff;            /* โจทย์: เปลี่ยนสีตัวอักษรเป็นสีขาว */
+    padding: 10px 20px;        /* โจทย์: Padding บน-ล่าง 10px, ซ้าย-ขวา 20px */
+    border: none;              /* โจทย์: ลบเส้นขอบออก */
+    border-radius: 5px;        /* โจทย์: ขอบปุ่มมน 5px */
+    font-size: 16px;           /* โจทย์: ขนาดตัวอักษร 16px */
+    cursor: pointer;           /* เพิ่มเติม: เปลี่ยนสัญลักษณ์เมาส์เป็นรูปมือ */
+    transition: background-color 0.3s ease; /* เพิ่มเติม: ทำให้สีเปลี่ยนแบบนุ่มนวล */
+}
+
+/* โจทย์: เมื่อนำเมาส์ไปชี้ (hover) ให้เปลี่ยนสีเป็นน้ำเงินเข้ม */
+.my-button:hover {
+    background-color: #0056b3;
+} -->
