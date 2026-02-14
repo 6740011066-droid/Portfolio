@@ -27,15 +27,15 @@ body {
     padding: 0 2rem; 
 }
 
-/* --- 2. Navigation --- */
-header { 
+/* --- 2. Navigation ---
+/* header { 
     position: fixed; 
     width: 100%; 
     top: 0; 
     background: rgba(17, 24, 39, 0.95); 
     backdrop-filter: blur(10px); 
-    z-index: 1000; 
-}
+    z-index: 1000;  
+} */
 
 nav { 
     display: flex; 
